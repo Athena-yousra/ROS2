@@ -2,7 +2,7 @@
 
 ## Overview
 This project presents an autonomous robotic crawler designed for internal pipeline inspection.  
-The system is capable of detecting corrosion, cracks, and obstacles using deep learning–based object detection (YOLOv11).  
+The system is capable of detecting corrosion, cracks, and obstacles using computer vision based object detection (YOLOv11).  
 It integrates real-time localization using wheel encoders and an IMU to estimate the position of detected defects inside the pipeline.  
 The robot can be driven manually through a Bluetooth-based teleoperation interface implemented with a ROS2 key publisher node.
 

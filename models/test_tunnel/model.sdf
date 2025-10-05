@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="test_tunnel">
+    <static>true</static>
+    <link name="link">
+      
+      <!-- Visual part (what you see) -->
+      <visual name="tunnel_visual">
+        <geometry>
+          <mesh>
+            <uri>model://test_tunnel/meshes/TestShape.dae</uri>
+            <scale>0.07 0.07 0.07</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <!-- Collision for the tunnel walls -->
+      <collision name="tunnel_collision">
+        <geometry>
+          <mesh>
+            <uri>model://test_tunnel/meshes/TestShape.dae</uri>
+            <scale>0.07 0.07 0.07</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <!-- Extra collision box to act as a base/ground support -->
+      <collision name="ground_support">
+        <geometry>
+          <box>
+            <size>2 2 0.05</size> <!-- width, depth, height -->
+          </box>
+        </geometry>
+        <pose>0 0 -0.5 0 0 0</pose> <!-- place it under the tunnel -->
+      </collision>
+
+    </link>
+  </model>
+</sdf>
+
